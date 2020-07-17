@@ -27,12 +27,12 @@ class News extends Component {
 
   renderItems() {
     return this.state.news.map((item) => (
-      <NewSingle key={item.id} item={item} />
+      <NewSingle key={item.url} item={item} />
     ));
   }
 
   render() {
-    return <ul>{this.renderItems()}</ul>;
+    return <div className="row">{this.renderItems()}</div>;
   }
 }
 
